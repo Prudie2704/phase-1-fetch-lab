@@ -1,9 +1,9 @@
-function fetchBooks() {
-  // To pass the tests, don't forget to return your fetch!
-  
+function fetchBooks("https://anapioficeandfire.com/api/books") {
+  then((res) => res.json())
+  .then((json) => console.log(json))
 }
-
-function renderBooks(books) {
+  // To pass the tests, don't forget to return your fetch!
+  function renderBooks(books) {
   const main = document.querySelector('main');
   books.forEach(book => {
     const h2 = document.createElement('h2');
